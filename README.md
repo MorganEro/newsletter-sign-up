@@ -16,8 +16,6 @@ This is a solution to the [Newsletter sign-up form with success message challeng
     - [Continued development](#continued-development)
   - [Author](#author)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -38,13 +36,14 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: (https://github.com/MorganEro/Pod-Request-access)
-- Live Site URL: (https://morganero.github.io/Pod-Request-access/)
+- Solution URL: (https://github.com/MorganEro/newsletter-sign-up)
+- Live Site URL: (https://morganero.github.io/newsletter-sign-up/)
 
 ## My process
 
 I created my variables for colors and fonts. Then created css for repeated styles.
-Next I completed the mobile view. After it was done, I created the javascript for the input field followed by the css needed for proper placement of the error message. I then created the tablet view and finally finished with the desktop view. After all the views were created, I checked for a responsive flow and made edits to the css to make sure everything looked as close to the figma and preview designs as I could.
+Next I completed the mobile view. I then created the desktop view. Lastly, I created the success views. After all the views were created, I checked for a responsive flow and made edits to the css to make sure everything looked as close to the figma and preview designs as I could.
+After matching the design, I created the javascript for the input field error and success message followed by the css needed for proper placement of the error message.
 
 ### Built with
 
@@ -57,11 +56,11 @@ Next I completed the mobile view. After it was done, I created the javascript fo
 
 ### What I learned
 
-I learned about using filter on images. I noticed that the colors given to us in the figma files were rich but some of the colors for the preview and figma images were more muted.
+I learned to use em and rems for more of my units in case someone has their screen with larger font size. The elements of my page will scale accordingly. This also meant I set my initial body font size based on a 16px font size and used 1rem for that. If someone has their font size set larger for visibility issues, everything should scale with that.
 
 ### Continued development
 
-Still working on improving my using of grid. I
+Still working on improving my usage of grid. I am also being more aware of the effect of padding and margin and how it effects the parent container.
 
 ## Author
 

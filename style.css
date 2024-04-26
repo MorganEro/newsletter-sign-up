@@ -106,7 +106,7 @@ input {
 }
 input::placeholder {
   color: var(--clr-grey);
-  padding: 18px 5px;
+  padding: 1.125em 0.3125em;
   font-size: 1rem;
 }
 input:focus,
@@ -179,7 +179,7 @@ button:active {
 
 @media (min-width: 556px) {
   .success-container {
-    width: 504px;
+    width: 31.5rem;
     border-radius: 36px;
     padding: 3.4em 4em 4.4em;
   }
@@ -188,7 +188,7 @@ button:active {
   }
 
   .success-container h1 {
-    margin-bottom: 30px;
+    margin-bottom: 1.875em;
   }
 
   .success-container p {
