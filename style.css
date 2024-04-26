@@ -1,0 +1,227 @@
+:root {
+  --font-family: 'Roboto', sans-serif;
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  /* PRIMARY */
+  --clr-tomato: hsl(4, 100%, 67%);
+  --clr-vermilion-dark: #ff527b;
+  --clr-vermilion-light: hsl(5, 100%, 95%);
+
+  /* NEUTRAL */
+  --clr-dark-slate-grey: hsl(234, 29%, 20%);
+  --clr-charcoal-grey: hsl(235, 18%, 26%);
+  --clr-grey: hsl(231, 7%, 60%);
+  --clr-white: hsl(0, 0%, 100%);
+}
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* GLOBAL */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  margin: auto;
+  min-height: 100vh;
+  color: var(--clr-dark-slate-grey);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-regular);
+  background-color: var(--clr-charcoal-grey);
+  line-height: 1.5;
+  font-size: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sign-up-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  background-color: var(--clr-white);
+  justify-items: center;
+}
+.sign-up-container__content {
+  text-align: start;
+  padding-inline: 1.56em;
+}
+
+.sign-up-container__content p {
+  margin-block: 1.7em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1;
+  font-weight: var(--font-weight-bold);
+  color: var(--clr-dark-slate-grey);
+  margin-bottom: 0.6em;
+  margin-top: 1em;
+}
+
+.update-list {
+  padding-bottom: 1.5em;
+}
+.update-list__item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.update-list__item > p {
+  margin: 0px 0px 0.625em 0.9em;
+}
+
+/* FORM */
+form {
+  position: relative;
+  width: 100%;
+  padding-bottom: 2.5em;
+}
+label {
+  font-weight: var(--font-weight-bold);
+  font-size: 0.75rem;
+}
+input {
+  display: block;
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  color: var(--clr-dark-slate-grey);
+  padding: 1.25em;
+  border: 2px solid var(--clr-vermilion-light);
+  border-radius: 8px;
+  background-color: var(--clr-white);
+  width: 100%;
+  margin-top: 0.3em;
+  margin-bottom: 1.7em;
+  position: relative;
+}
+input::placeholder {
+  color: var(--clr-grey);
+  padding: 18px 5px;
+  font-size: 1rem;
+}
+input:focus,
+input:active {
+  outline: 1px solid var(--clr-dark-slate-grey);
+}
+
+.invalid {
+  border: 1px solid var(--clr-tomato);
+  background-color: var(--clr-vermilion-light);
+  color: var(--clr-tomato);
+}
+.invalid::placeholder {
+  color: var(--clr-tomato);
+}
+button {
+  display: block;
+  font-family: var(--font-family);
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--clr-white);
+  background-color: var(--clr-dark-slate-grey);
+  padding: 1.125em 1.25em;
+  border: none;
+  border-radius: 8px;
+  width: 100%;
+  cursor: pointer;
+}
+button:hover,
+button:focus,
+button:active {
+  background-color: var(--clr-tomato);
+  box-shadow: 0px 11px 22px 0px rgba(242, 90, 90, 0.56);
+  outline: none;
+}
+
+.form-error {
+  color: red;
+  font-size: 0.75rem;
+  font-weight: bold;
+  font-weight: var(--font-weight-bold);
+  position: absolute;
+  top: 4px;
+  right: 0px;
+}
+
+/* SUCCESS */
+
+.success-container {
+  display: none;
+  background-color: var(--clr-white);
+  text-align: start;
+  padding: 2.2em 1.4em;
+}
+
+.success-container img {
+  margin-top: 7em;
+}
+
+.success-container h1 {
+  margin-bottom: 0.6em;
+  margin-top: 0.9em;
+}
+
+.success-container p {
+  margin-bottom: 16em;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 556px) {
+  .success-container {
+    width: 504px;
+    border-radius: 36px;
+    padding: 3.4em 4em 4.4em;
+  }
+  .success-container img {
+    margin-top: 0;
+  }
+
+  .success-container h1 {
+    margin-bottom: 30px;
+  }
+
+  .success-container p {
+    margin-bottom: 2.5em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sign-up-container {
+    grid-template-columns: 49% 51%;
+    grid-auto-flow: dense;
+    border-radius: 36px;
+    padding: 1.5em 0.5em 1.5em 2.5em;
+    gap: 1em;
+  }
+
+  .sign-up-container > picture {
+    grid-column: 2;
+  }
+
+  .sign-up-container__content {
+    grid-column: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    margin-block: 0;
+  }
+
+  form {
+    padding-bottom: 0;
+  }
+}
